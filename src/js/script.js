@@ -89,10 +89,16 @@
   class Product {
     constructor(id, data) {
       const thisProduct = this;
+      /*tworzenie in i obiektu data w instancji Product*/
       thisProduct.id = id;
       thisProduct.data = data;
+      /*Renderowanie*/
+      thisProduct.renderInMenu();
       /*Wyświetlanie przez konstruktor klasy*/
       console.log('new Product:', thisProduct);
+    }
+    renderInMenu() {
+      const thisProduct = this;
     }
   }
   /*DEKLARACJA APP*/
