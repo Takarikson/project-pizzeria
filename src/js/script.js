@@ -99,6 +99,14 @@
     }
     renderInMenu() {
       const thisProduct = this;
+      /* generate HTML based on template - wygenerować kod HTML pojedynczego produktu (za pomocą handlebarsa templates ktory bierze wartosci z obiektu templateOf )*/
+      const generatedHTML = templates.menuProduct(thisProduct.data);
+      /* create element using utils.createElementFromDOM - stworzyć element DOM na podstawie tego kodu produktu (pobierane z utils z functions.js) */
+      thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+      /* find menu container - znaleźć na stronie kontener menu,*/
+      const menuContainer = document.querySelector(select.containerOf.menu);
+      /* add element to menu - wstawić stworzony element DOM do znalezionego kontenera menu (za pomocą metody appendChild)*/
+      menuContainer.appendChild(thisProduct.element);
     }
   }
   /*DEKLARACJA APP*/
