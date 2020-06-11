@@ -53,15 +53,49 @@
   };
 
   const app = {
-    init: function(){
+    initMenu: function () {
+      const thisApp = this;
+
+      console.log('thisApp.data:', thisApp.data);
+
+      /*Tworzenie instancji dla każdego produktu(w pętli) po obiekcie thisApp.data.products*/
+      for (let productData in thisApp.data.products) {
+        new Product(productData, thisApp.data.products[productData]);
+      };
+      // const testProduct = new Product();
+      // /*uruchomienie w metodzie app.initMenu*/
+      // console.log('testProduct:', testProduct);
+
+    },
+    /*Instancja dla każdego produktu*/
+    initData: function () {
+      const thisApp = this;
+
+      thisApp.data = dataSource;
+    },
+    init: function () {
       const thisApp = this;
       console.log('*** App starting ***');
       console.log('thisApp:', thisApp);
       console.log('classNames:', classNames);
       console.log('settings:', settings);
       console.log('templates:', templates);
+      /*dodawanie delkaracji*/
+      thisApp.initData();
+      /*dodawanie delkaracji przed app init*/
+      thisApp.initMenu();
     },
   };
-
+  class Product {
+    constructor(id, data) {
+      const thisProduct = this;
+      thisProduct.id = id;
+      thisProduct.data = data;
+      /*Wyświetlanie przez konstruktor klasy*/
+      console.log('new Product:', thisProduct);
+    }
+  }
+  /*DEKLARACJA APP*/
   app.init();
+  app.initData()
 }
