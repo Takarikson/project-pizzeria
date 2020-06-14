@@ -114,11 +114,7 @@
     initAccordion() {
       const thisProduct = this;
       /* find the clickable trigger (the element that should react to clicking) */
-      const buttonTest = document.getElementById('button-test');
 
-      buttonTest.addEventListener('click', function () {
-        console.log('clicked');
-      });
       /* START: click event listener to trigger */
 
       /* prevent default action for event */
