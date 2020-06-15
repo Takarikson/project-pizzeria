@@ -112,13 +112,15 @@
       menuContainer.appendChild(thisProduct.element);
     }
     initAccordion() {
-      const thisProduct = this;
       /* find the clickable trigger (the element that should react to clicking) */
-
-      /* START: click event listener to trigger */
-
+      const thisProduct = select.menuProduct(thisProduct.clickable);
+      // /* START: click event listener to trigger */
+      const buttonTest = document.getElementById('button-test');
+      buttonTest.addEventListener('click', function () {
+        console.log('clicked');
+      });
       /* prevent default action for event */
-
+      event.preventDefaut();
       /* toggle active class on element of thisProduct */
 
       /* find all active products */
