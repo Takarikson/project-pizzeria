@@ -61,7 +61,7 @@
       /*Tworzenie instancji dla każdego produktu(w pętli) po obiekcie thisApp.data.products*/
       for (let productData in thisApp.data.products) {
         new Product(productData, thisApp.data.products[productData]);
-      };
+      }
       // const testProduct = new Product();
       // /*uruchomienie w metodzie app.initMenu*/
       // console.log('testProduct:', testProduct);
@@ -114,7 +114,7 @@
     initAccordion() {
       /* find the clickable trigger (the element that should react to clicking) */
       const thisProduct = select.menuProduct(thisProduct.clickable);
-      // /* START: click event listener to trigger */
+      /* START: click event listener to trigger */
       const buttonTest = document.getElementById('button-test');
       buttonTest.addEventListener('click', function () {
         console.log('clicked');
@@ -141,5 +141,5 @@
   }
   /*DEKLARACJA APP*/
   app.init();
-  app.initData()
+  app.initData();
 }
