@@ -112,30 +112,30 @@
       menuContainer.appendChild(thisProduct.element);
     }
     initAccordion() {
-      /* find the clickable trigger (the element that should react to clicking) */
-      const thisProduct = select.menuProduct(thisProduct.clickable);
-      /* START: click event listener to trigger */
-      const buttonTest = document.getElementById('button-test');
-      buttonTest.addEventListener('click', function () {
-        console.log('clicked');
-      });
-      /* prevent default action for event */
-      event.preventDefaut();
-      /* toggle active class on element of thisProduct */
-      // const activeProduct = thisProduct.menuProductsActive;
-      /* find all active products *//*Chodzi tutaj o classNames.menuProduct.wrapperActive???*/
+      //   /* find the clickable trigger (the element that should react to clicking) */
+      //   const thisProduct = select.menuProduct(thisProduct.clickable);
+      //   /* START: click event listener to trigger */
+      //   const buttonTest = document.getElementById('button-test');
+      //   buttonTest.addEventListener('click', function () {
+      //     console.log('clicked');
+      //   });
+      //   /* prevent default action for event */
+      //   event.preventDefaut();
+      //   /* toggle active class on element of thisProduct */
+      //   // const activeProduct = thisProduct.menuProductsActive;
+      //   /* find all active products *//*Chodzi tutaj o classNames.menuProduct.wrapperActive???*/
 
-      /* START LOOP: for each active product */
+      //   /* START LOOP: for each active product */
 
-      /* START: if the active product isn't the element of thisProduct */
+      //   /* START: if the active product isn't the element of thisProduct */
 
-      /* remove class active for the active product */
+      //   /* remove class active for the active product */
 
-      /* END: if the active product isn't the element of thisProduct */
+      //   /* END: if the active product isn't the element of thisProduct */
 
-      /* END LOOP: for each active product */
+      //   /* END LOOP: for each active product */
 
-      /* END: click event listener to trigger */
+      //   /* END: click event listener to trigger */
 
     }
   }
