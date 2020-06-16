@@ -122,7 +122,7 @@
       /* prevent default action for event */
       event.preventDefaut();
       /* toggle active class on element of thisProduct */
-      const activeProduct = thisProduct.menuProductsActive;
+      // const activeProduct = thisProduct.menuProductsActive;
       /* find all active products *//*Chodzi tutaj o classNames.menuProduct.wrapperActive???*/
 
       /* START LOOP: for each active product */
