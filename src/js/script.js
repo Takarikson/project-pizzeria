@@ -175,7 +175,11 @@
     }
     processOrder() {
       const thisProduct = this;
-      console.log('proccesOrder', thisProduct);
+      /* read all data from the form (using utils.serializeFormToObject) and save it to const formData */
+      const formData = utils.serializeFormToObject(thisProduct.form);
+      console.log('formData', formData);
+      /* set variable price to equal thisProduct.data.price */
+      let price = thisProduct.data.price;
     }
   }
   /*DEKLARACJA APP*/
