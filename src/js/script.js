@@ -94,14 +94,15 @@
       thisProduct.data = data;
       /*Renderowanie*/
       thisProduct.renderInMenu();
+      /*DOM ELEMENTS*/
+      thisProduct.getElements();
       /*Accordion*/
       thisProduct.initAccordion();
       /*Initialize Forms*/
       thisProduct.initOrderForm();
       // /*Initialize Orders*/
       thisProduct.processOrder();
-      /*DOM ELEMENTS*/
-      thisProduct.getElements();
+
 
 
       /*Wyświetlanie przez konstruktor klasy*/
@@ -174,7 +175,7 @@
     }
     processOrder() {
       const thisProduct = this;
-      console.log('proccesOrder');
+      console.log('proccesOrder', thisProduct);
     }
   }
   /*DEKLARACJA APP*/
